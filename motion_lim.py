@@ -130,7 +130,7 @@ for _ in range(448):
  
     folder_name = str(idx)
 
-    folder_path = os.path.join('/data/wyy/score_AAPM/results/LA-CT/m60.00/', folder_name, 'limited')
+    folder_path = os.path.join('/data/wyy/score_AAPM/results/LA-CT/m90.00/', folder_name, 'limited')
 
  
     if os.path.isdir(folder_path):
@@ -223,7 +223,7 @@ for _ in range(448):
         print("song",numrepeat)
         x,x_512 = pc_song(score_model, scaler(img.repeat(numrepeat,1,1,1)), mask, sinogram,0.02,False,numrepeat)
         plt.imsave(str(save_root / 'recon' / f'{str(idx).zfill(4)}.png'), clear(x[0,:,:,:].unsqueeze(0)), cmap='gray')
-
+    # get_pc_radon_limited for our method will be Forthcoming open source
     elif solver == 'limited':
         pc_song = controllable_generation.get_pc_radon_limited(sde,
                                                             predictor, corrector,
