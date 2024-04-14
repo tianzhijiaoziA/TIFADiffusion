@@ -39,7 +39,7 @@ def np2torch_radon(x,x_device):
   return x 
 def np2torch_radon_view(x,x_device):
   x = torch.from_numpy(x)
-  x = x.view(1,1,312,640)
+  x = x.view(1,1,360,640)
   x = x.to(x_device.device)
   return x 
 ###############################################
@@ -56,7 +56,7 @@ root = '/data/wyy/score_AAPM/L067_test_ye'
 
 # Parameters for the inverse problem
 angle_full = 180
-sparsity = 3
+sparsity = 2
 num_proj = angle_full // sparsity  # 180 / 6 = 30
 det_spacing = 1.0
 size = 256
@@ -142,7 +142,7 @@ for _ in range(448):
 
     idx = "XXX"
 
-    save_root = Path(f'./results/LA-CT/m{60.00}/{idx}/{solver}')
+    save_root = Path(f'./results/LA-CT/m{90.00}/{idx}/{solver}')
     save_root.mkdir(parents=True, exist_ok=True)
 
     irl_types = ['input', 'recon', 'label']

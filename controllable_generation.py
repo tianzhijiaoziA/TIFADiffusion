@@ -34,7 +34,7 @@ def np2torch_radon(x,x_device):
   return x 
 def np2torch_radon_view(x,x_device):
   x = torch.from_numpy(x)
-  x = x.view(1,1,312,640)
+  x = x.view(1,1,360,640)
   x = x.to(x_device.device)
   return x 
 
