@@ -2,7 +2,7 @@
 
 Our paper has been submitted to IEEE Transactions on Medical Imaging  (Reject/Resubmit: major revisions needed and new external review required (12-Nov-2023). 
 
-Our early work has applied for China invention patent for power protection: CN117422784A
+Our early work has applied for China invention patent protection: CN117422784A
 
 ![concept](./assets/motivation.png)
 
